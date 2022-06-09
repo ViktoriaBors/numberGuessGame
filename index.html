@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="basic">
+        <h1>Number Guessing Game</h1>
+        <p>The computer chosed a number between 1 and 100 (both number included too).</p>
+    
+        <p>Can you guess the right number within 10 tries?</p>
+    
+        <h3>Good Luck!</h3>
+    </section>
+
+    <form class="formStyle">
+        <label for="guessed"> Enter your Guess:</label>
+        <input type="number" id="guessed" min="1" max="100" required>
+    </form>
+
+    <div class="buttonField">
+        <button id="submit">SUBMIT</button>
+        <button class="hidden" id="reset">RESET</button>
+    </div>
+    
+    <div class="basic">Previously guessed numbers:
+        <div class="prev">
+        </div> 
+    </div>
+    
+    <div class="hidden basic" id="gameOver">
+        <h3>GameOver</h3>
+        <p>You could not guess right within 10 tries!</p>
+    </div>
+
+    <div class="hidden basic" id="right">
+          <h3>Congratulation! Your guessed right!</h3>
+    </div>
+    <div class="hidden basic" id="wrong">
+        <h3>WRONG!</h3>
+     </div>
+    <div class="hidden basic" id="low">
+        <p>Your guess is lower than THE NUMBER</p>
+     </div>
+     <div class="hidden basic" id="high">
+        <p>Your guess is greater than THE NUMBER</p>
+    </div>
+
+    
+    
+    
+    <script src="script.js"></script>
+ 
+</body>
+</html>

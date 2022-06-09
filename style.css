@@ -1,0 +1,76 @@
+ body {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: rgba(75, 93, 103,0.7);     
+ }
+
+ .basic {
+     margin: 1rem;
+     padding: 0.5rem;
+     border: 1px solid black;
+     border-radius: 5px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     background-color: rgb(252, 253, 234);
+     color: rgb(59, 71, 60); 
+ }
+ .basic > h1{
+     color: black
+ }
+
+ .formStyle{
+     display: flex;
+     flex-direction: column;
+     padding: 0.5rem;
+     text-align: center;
+ }
+ .formStyle > label{
+     margin-bottom: 0.5rem;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+ }
+ .formStyle > input{
+    padding: 0.3rem;
+    border-radius: 3px;
+    border: 1px solid black;
+    background-color: rgb(252, 253, 234)
+ }
+ button {
+    margin: 0.3rem;
+    padding: 0.3rem;
+    width: 150px;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: rgb(75, 93, 103);
+    color: white;
+ }
+ button:hover{
+    background-color: rgb(117, 145, 160);
+    cursor: pointer;
+ }
+
+.hidden{
+     display: none;
+ }
+.display{
+    display: block;
+}
+
+#wrong, #gameOver{
+    background-color: #B20600;
+    color: white;
+}
+
+#right{
+    background-color: #6D8B74;
+    color: white;
+}
