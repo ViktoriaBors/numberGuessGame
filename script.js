@@ -91,6 +91,8 @@ function resetGame() { // resetting the game
     wrong.classList.add("hidden")
     gameOverText.classList.remove("display")
     gameOverText.classList.add("hidden")
+    right.classList.remove("display")
+    right.classList.add("hidden")
     reset.classList.remove("display")
     reset.classList.add("hidden") // reset button hidden
 }
