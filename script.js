@@ -22,27 +22,23 @@ submit.addEventListener("click", guessingGame)
 /*get the submit button - by clicking on that the game starts */
 
 function guessingGame() {
-    let guessedNumber = parseInt(document.querySelector("#guessed").value); //get the guessed number/value form the user from the input field
-
+    let guessedNumber = parseInt(guessField.value); //get the guessed number/value form the user from the input field
+   // NOTE: guessedNumber is a NaN as a begininig. I grabbed the input field as a global variable - after the page ready - reads the value which is ""an empty string
+    let textNode = document.createTextNode(guessedNumber + " ")
     if (guessedNumber === theNumber) { //if the guessed number is the random number - game is over by winning it - gameOverWon function start
-        console.log("grat");
         gameOverWon()
-        console.log(numberOfGuess)
         return numberOfGuess
     } else if (numberOfGuess === 10) { //if the user couldnt guessed the nr within 10 tries - gameOver function start - this is because of user lost
         gameOver()
     } else { //if none above happened yet - the guessed nr checked against the random nr - greater or less than 
-        console.log(numberOfGuess)
-        if (guessedNumber > theNumber) { //if the guessed nr greater than the random nr - the wrong, high html class shown, the rest,namely low, is removed.
-            console.log("greater")
-            prev.innerHTML += guessedNumber + " "
+        if (guessedNumber > theNumber) { //if the guessed nr greater than the random nr - the wrong, high html class shown, the rest,namely low, is removed.            
+            prev.append(textNode)
             wrong.classList.add("display")
             high.classList.add("display")
             low.classList.remove("display")
             low.classList.add("hidden")
-        } else if (guessedNumber < theNumber) { //if the guessed nr less than the random nr - the wrong, low html class shown, the rest,namely high, is removed.
-            console.log("smaller");
-            prev.innerHTML += guessedNumber + " "
+        } else if (guessedNumber < theNumber) { //if the guessed nr less than the random nr - the wrong, low html class shown, the rest,namely high, is removed.;
+            prev.append(textNode)
             wrong.classList.add("display")
             low.classList.add("display")
             high.classList.remove("display")
@@ -97,5 +93,4 @@ function resetGame() { // resetting the game
     reset.classList.add("hidden") // reset button hidden
 }
 
-console.log(guessingGame())
 
